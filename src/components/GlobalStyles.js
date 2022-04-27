@@ -15,10 +15,6 @@ const GlobalStyles = createGlobalStyle`
 }
 
 
-html {
-  font-size: 62.5%;
-}
-
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -39,7 +35,19 @@ h2 {
 }
 
 li {
-  font-family: 'Raleway', sans-serif; 
+  list-style-type: none;
+}
+
+li a {
+  color: #161616;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.063rem;
+  text-decoration: none;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
 }
 `
 

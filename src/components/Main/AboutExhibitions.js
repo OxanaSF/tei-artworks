@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const AboutExhibitions = () => {
   return (
-    <ExhibitionsSectionStyled>About Exhibitions</ExhibitionsSectionStyled>
+    <ExhibitionsSectionStyled>
+      <h2>Exhibitions</h2> 
+    </ExhibitionsSectionStyled>
   )
 }
 

@@ -1,32 +1,42 @@
 import GlobalStyles from "./components/GlobalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from './components/Header/Header'
-import Home from './pages/Home'
 
+import styled from "styled-components";
+
+import Home from './components/Main/Home'
 import Exhibitions from './pages/Exhibitions'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
+
+
+
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyles />
 
-
       <Router>
-        <Header />
-        <section className="page-content">
+        <AppWrapperStyled className="page-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/work" element={<Exhibitions />} />
-            <Route path="/blog" element={<About />} />
-            <Route path="/account" element={<Contact />} />
+            <Route path="/exhibitions" element={<Exhibitions />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
-        </section>
+        </AppWrapperStyled>
       </Router>
-    </div>
+    </>
   );
 }
+
+
+const AppWrapperStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 1440px;
+  margin: auto;
+`
 
 export default App;
