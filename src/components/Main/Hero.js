@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import arrowRight from "../../assets/images/right-arrow.png";
-import arrowDown from "../../assets/images/down.png";
 import holographicHand from "../../assets/images/holographic_wall_display.png";
 import colorfulCharacter from "../../assets/images/colorful_character.png";
+import SeeMore from "../SeeMore";
+
+import LeftScroll from "../LeftScroll";
+import arrowRight from '../../assets/images/right-arrow-black.png'
 
 const Hero = () => {
   const [isScaled, setIsScaled] = useState(false);
@@ -13,16 +15,12 @@ const Hero = () => {
   };
 
 
-  function changeBackground(e) {
-    e.target.style.background = 'red';
-  }
+
 
   return (
-    <div>
       <HeroStyled>
         <HeroLeftStyled>
-          <p>01</p>
-          <img src={arrowDown} alt="arrow-down " />
+          <LeftScroll number={1}/>
         </HeroLeftStyled>
 
         <h1>Tei Artworks</h1>
@@ -37,10 +35,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="arrow-right">
-          <p>See more </p>
-          <img src={arrowRight} alt="arrow-right" />
-        </div>
+        <SeeMore arrowRight={arrowRight} />
 
         <div className="bottom">
           {!isScaled && (
@@ -80,7 +75,7 @@ const Hero = () => {
 
         </div>
       </HeroStyled>
-    </div>
+
   );
 };
 
@@ -90,8 +85,8 @@ const HeroStyled = styled.section`
   gap: 3rem;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-areas:
-    "box1 box2 box2 box3"
-    "box1 box4 box4 box5"
+    "box1 box2 box2 box2"
+    "box1 box4 box4 box3"
     "box1 box6 box6 box6";
 
   h1 {
@@ -127,10 +122,21 @@ const HeroStyled = styled.section`
       height: 100%;
       box-shadow: -8px 8px 4px rgba(0, 0, 0, 0.25);
     }
+    
 
-    .imgLeft-hover,
-    .imgRight-hover  {
+    .imgLeft-hover  {
       width: 50%;
+      height: 100%;
+      box-shadow: -8px 8px 4px rgba(0, 0, 0, 0.25);
+      transform: scale(1.2);
+      transition: transform 0.5s ease;
+      transition-duration: 2s;
+      transition-delay: 0.5s;
+   
+    }
+
+    .imgRight-hover  {
+      width: 45.5%;
       height: 100%;
       box-shadow: -8px 8px 4px rgba(0, 0, 0, 0.25);
       transform: scale(1.2);
@@ -143,7 +149,7 @@ const HeroStyled = styled.section`
   }
 `;
 
-const HeroLeftStyled = styled.header`
+const HeroLeftStyled = styled.section`
   grid-area: box1;
 
   img {
