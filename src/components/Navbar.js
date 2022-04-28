@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { routes } from "./NavbarItems";
 import styled from "styled-components";
 import logo from "../assets/images/Tei_Artworks.gif";
 import instagram from "../assets/images/instagram.png";
@@ -8,21 +10,13 @@ const Navbar = () => {
     <NavbarStyled>
       <div className="nav-left">
         <img src={logo} alt="logo" id="logo" />
+
         <ul>
-          <li>
-            <a href="#locations">Home</a>
-          </li>
-          <li>
-            <a href="#benefits">Exhibitions</a>
-          </li>
-          <li>
-            <a href="#contact">About</a>
-          </li>
-          <li>
-            <a href="#contact" className="nav-contact">
-              Contact
-            </a>
-          </li>
+          {routes.map((route) => (
+            <NavLink className="li" to={route.path} key={route.name}>
+              <div className="listItem">{route.name}</div>
+            </NavLink>
+          ))}
         </ul>
       </div>
       <img src={instagram} alt="instagram" id="instagram" />

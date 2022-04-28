@@ -173,8 +173,7 @@ const HeroLeftStyled = styled.section`
 
   img {
     width: 2rem;
-    bottom: 0%;
-    left: 5%;
+   
   }
 `;
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import SeeMore from "../SeeMore";
 import ExhibitionChairs from "../../assets/images/exhibition_w_chairs.png";
@@ -44,11 +45,14 @@ const AboutExhibitions = () => {
       <SeeMore arrowRight={ArrowPointRight} />
 
       <div className="bottom">
+
+        {/* <NavLink className="imgLeft" to={'/test'}> */}
         <img
           className="imgLeft"
           src={ExhibitionChairs}
           alt="exhibition chairs"
         />
+        {/* </NavLink> */}
 
         <div className="img-wrapper">
           <img

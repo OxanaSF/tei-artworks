@@ -8,6 +8,7 @@ import Home from './components/Main/Home'
 import Exhibitions from './pages/Exhibitions'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Test from "./components/Test";
 
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/exhibitions" element={<Exhibitions />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </AppWrapperStyled>
       </Router>

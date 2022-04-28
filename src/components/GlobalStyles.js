@@ -42,6 +42,7 @@ li {
   list-style-type: none;
 }
 
+.li, .listItem,
 li a {
   color: #161616;
   font-family: 'Raleway', sans-serif;
