@@ -25,7 +25,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <img src={instagram} alt="instagram" id="instawork" />
+      <img src={instagram} alt="instagram" id="instagram" />
     </NavbarStyled>
   );
 };
@@ -50,7 +50,7 @@ const NavbarStyled = styled.nav`
     box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.7);
   }
 
-  #instawork {
+  #instagram {
     width: 2rem;
   }
 

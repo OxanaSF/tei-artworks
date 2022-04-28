@@ -8,46 +8,50 @@ import Hero from "./Hero";
 import Smile from "./Smile";
 import AboutExhibitions from "./AboutExhibitions";
 import Footer from "../Footer";
-import Booking from './Booking'
+import Booking from "./Booking";
 
-const Main = () => {
+const Home = () => {
   return (
     <MainWrapperStyled>
+
+
       <div className="header-hero-bg">
         <Navbar />
         <Hero />
       </div>
+
+
       <Smile />
       <AboutExhibitions />
 
       <div className="booking-footer-bg">
-      <Booking />
-      <Footer />
+        <Booking />
+        <Footer />
       </div>
+
+
     </MainWrapperStyled>
   );
 };
 
 const MainWrapperStyled = styled.div`
-
   .header-hero-bg {
     background-image: url(${bgMarble});
     background-repeat: no-repeat;
-    background-position: center -30px;
+    background-position: center -10px;
     background-size: stretch;
 
     min-height: 58rem;
-    
   }
 
-  .booking-footer-bg{
+  .booking-footer-bg {
     background-image: url(${bgMarble});
     background-repeat: no-repeat;
-    background-position: center 30px;
+    background-position: center -5px;
     background-size: stretch;
 
     min-height: 58rem;
   }
 `;
 
-export default Main;
+export default Home;

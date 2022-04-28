@@ -1,13 +1,28 @@
 import React from 'react'
-import arrowDown from '../assets/images/down.png'
+import styled from "styled-components";
+// import  horizontLine from '../assets/images/minus.png'
+
 
 const LeftScroll = (props) => {
   return (
-    <div>
-         <p>{props.number}</p>
-          <img src={arrowDown} alt="arrow-down " />
-    </div>
+    <LeftScrollStyled>
+
+           <img src={props.minus} alt="horizontal line" />
+           <p>{props.number}</p>
+    </LeftScrollStyled>
   )
 }
+
+const LeftScrollStyled = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+`
 
 export default LeftScroll
