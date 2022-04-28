@@ -10,6 +10,8 @@ import minus from "../../assets/images/minus-white.png";
 import arrowDown from "../../assets/images/arrow-down-white.png";
 import { Link } from "react-scroll";
 
+
+
 const AboutExhibitions = () => {
   const [isScaled, setIsScaled] = useState(false);
 

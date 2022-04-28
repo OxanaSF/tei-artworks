@@ -9,6 +9,7 @@ import Smile from "./Smile";
 import AboutExhibitions from "./AboutExhibitions";
 import Footer from "../Footer";
 import Booking from "./Booking";
+import Modal from '../../components/Main/Modal'
 
 const Home = () => {
   return (
@@ -28,6 +29,9 @@ const Home = () => {
         <Booking />
         <Footer />
       </div>
+
+
+      <Modal />
 
 
     </MainWrapperStyled>
