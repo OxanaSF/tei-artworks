@@ -2,26 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import chairsImg from "../../assets/images/exhibition_w_chairs.png";
 import close from "../../assets/images/close.png";
-import ranningCharacter from "../../assets/images/big_character.png";
+import runningCharacter from "../../assets/images/big_character.png";
 
-const Modal = () => {
+const ModalExhibitions = (props) => {
   return (
     <ModalStyled>
       <div className="modal-container">
-        <div className="container-left">
-          <h1>Left</h1>
-        </div>
+        <div className="container-left"></div>
 
         <div className="container-right">
-          <img className="close" src={close} alt="close" />
+          <img
+            onClick={() => {
+              props.setOpenModal(false);
+            }}
+            className="close"
+            src={close}
+            alt="close"
+          />
 
           <div className="test">
             <h3>Lorem Ipsum</h3>
             <div className="running-character-bg">
               <img
                 className="running-character"
-                src={ranningCharacter}
-                alt="ranning character"
+                src={runningCharacter}
+                alt="running character"
               />
             </div>
             <p>
@@ -29,7 +34,6 @@ const Modal = () => {
               doloremque nobis.
             </p>
           </div>
-          {/* <div></div> */}
         </div>
       </div>
     </ModalStyled>
@@ -37,7 +41,10 @@ const Modal = () => {
 };
 
 const ModalStyled = styled.section`
+  position: fixed;
+  z-index: 3;
   min-height: 58rem;
+  width: 90rem;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -74,6 +81,7 @@ const ModalStyled = styled.section`
     .close {
       float: right;
       margin-top: 0.4rem;
+      cursor: pointer;
     }
 
     .running-character-bg {
@@ -89,6 +97,7 @@ const ModalStyled = styled.section`
       font-size: 2rem;
       font-family: "Raleway", sans-serif;
       font-weight: 700;
+      padding-bottom: 1.5rem;
     }
     .running-character {
       width: 19.625rem;
@@ -105,7 +114,7 @@ const ModalStyled = styled.section`
       font-weight: lighter;
       line-height: 1.2;
       padding-top: 2rem;
-      width: 40%;
+      width: 55%;
     }
     img {
       width: 1.8rem;
@@ -114,4 +123,4 @@ const ModalStyled = styled.section`
   }
 `;
 
-export default Modal;
+export default ModalExhibitions;

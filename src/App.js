@@ -1,3 +1,4 @@
+
 import GlobalStyles from "./components/GlobalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -7,28 +8,23 @@ import Home from "./components/Main/Home";
 import Exhibitions from "./pages/Exhibitions";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   return (
     <>
- 
       <GlobalStyles />
 
       <Router>
         <AppWrapperStyled className="page-content">
-        
           <Routes>
-          
             <Route path="/" element={<Home />} />
+
             <Route path="/exhibitions" element={<Exhibitions />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            
           </Routes>
-          
         </AppWrapperStyled>
-        
       </Router>
     </>
   );
@@ -39,6 +35,7 @@ const AppWrapperStyled = styled.div`
   justify-content: center;
   width: 1440px;
   margin: auto;
+  position: relative;
 `;
 
 export default App;

@@ -6,17 +6,20 @@ import ArrowRightContactMe from "../../assets/images/right-arrow-contact-me.png"
 import minus from "../../assets/images/minus.png";
 import arrowDown from "../../assets/images/arrow-down-black.png";
 import { Link } from "react-scroll";
+import home from "../../assets/images/home-black.png";
 
 const Booking = () => {
   return (
     <BookingStyled id="bookings">
       <BookingLeftStyled>
+        <img src={home} alt="home icon" className="home-icon" />
+
         <div className="page">
-          <img src={minus} alt="horizontal line" />
+          <div className="horizontal-line"></div>
           <p>04</p>
         </div>
 
-      
+        <div></div>
       </BookingLeftStyled>
 
       <div className="man-painting">
@@ -41,7 +44,7 @@ const Booking = () => {
 
 const BookingStyled = styled.section`
   display: flex;
-  padding-top: 4rem;
+  padding-top: 2.5rem;
   align-items: center;
 
   .link {
@@ -50,13 +53,15 @@ const BookingStyled = styled.section`
 
   .page {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
   }
 
   .man-painting {
     img {
       box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-      height: 701px;
+      height: 650px;
+ 
       width: 82%;
     }
   }
@@ -82,7 +87,12 @@ const BookingStyled = styled.section`
     gap: 4rem;
 
     h2 {
-      font-size: 3.4rem;
+      font-size: 3.3rem;
+    }
+
+    p{
+      font-size: 1.5rem;
+      line-height: 1.2;
     }
 
     .contact-me {
@@ -103,23 +113,32 @@ const BookingStyled = styled.section`
 `;
 
 const BookingLeftStyled = styled.section`
-  width: 10%;
+  width: 11%;
 
-  
+  .horizontal-line {
+    width: 3.5rem;
+    border-bottom: 1.6px solid black;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 20rem;
 
   p {
     font-size: 1.5rem;
     font-weight: lighter;
   }
 
+  .home-icon {
+    width: 3rem;
+    margin-left: 3.5rem;
+    cursor: pointer;
+  }
+
   img {
     width: 2rem;
-    bottom: 0%;
-    left: 10%;
+    margin-bottom: 2rem;
   }
 `;
 

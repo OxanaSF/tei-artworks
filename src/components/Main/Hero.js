@@ -3,27 +3,31 @@ import styled from "styled-components";
 import holographicHand from "../../assets/images/holographic_wall_display.png";
 import colorfulCharacter from "../../assets/images/colorful_character.png";
 import SeeMore from "../SeeMore";
-import minus from "../../assets/images/minus.png";
 import arrowRight from "../../assets/images/right-arrow-black.png";
-import arrowDown from "../../assets/images/arrow-down-black.png";
 import { Link } from "react-scroll";
+import arrowDown from '../../assets/images/down-arrow-black.png'
 
 const Hero = () => {
   const [isScaled, setIsScaled] = useState(false);
+
+  const [initialScale, setInitialScale] = useState(true);
 
   const hoverEffectHandler = () => {
     setIsScaled(!isScaled);
   };
 
   return (
-    <HeroStyled>
+    <HeroStyled initialScale={initialScale} >
       <HeroLeftStyled>
+
+        <div></div>
+
         <div className="page">
-          <img src={minus} alt="horizontal line" />
+          <div className="horizontal-line"></div>
           <p>01</p>
         </div>
 
-        <Link className="link" to="smile">
+        <Link className="link" to="smile" className="arrow-down-icon">
           <img src={arrowDown} alt="arrow to the right" />
         </Link>
       </HeroLeftStyled>
@@ -42,55 +46,48 @@ const Hero = () => {
 
       <SeeMore arrowRight={arrowRight} padding={2} />
 
-      <div className="bottom">
-        {!isScaled && (
-          <img
-            onMouseOver={hoverEffectHandler}
-            className="imgLeft"
-            src={holographicHand}
-            alt="holographic hands"
-          />
-        )}
+      <div
+        className="bottom"
+        onMouseEnter={() => {
+          setInitialScale(false);
+        }}
+        onMouseLeave={() => {
+          setInitialScale(true);
+        }}
+      >
+        <img
+          onMouseOver={hoverEffectHandler}
+          className="imgLeft"
+          src={holographicHand}
+          alt="holographic hands"
+        />
 
-        {!isScaled && (
-          <img
-            onMouseLeave={hoverEffectHandler}
-            className="imgRight-hover"
-            src={colorfulCharacter}
-            alt="colorful character"
-          />
-        )}
-
-        {isScaled && (
-          <img
-            onMouseLeave={hoverEffectHandler}
-            className="imgLeft-hover"
-            src={holographicHand}
-            alt="holographic hand"
-          />
-        )}
-        {isScaled && (
-          <img
-            onMouseOver={hoverEffectHandler}
-            className="imgRight"
-            src={colorfulCharacter}
-            alt="colorful character"
-          />
-        )}
+        <img
+          onMouseOver={hoverEffectHandler}
+          className="imgRight"
+          src={colorfulCharacter}
+          alt="colorful character"
+        />
       </div>
     </HeroStyled>
   );
 };
 
 const HeroStyled = styled.section`
+  overflow-x: hidden;
   display: grid;
-  grid-template-rows: 10% 20% 40%;
+  height: 58rem;
+  grid-template-rows: 10% 19% 40% 10%;
   gap: 3rem;
+  margin-bottom: -3.5rem;
+  /* gap: auto; */
+
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-areas:
-    ". box2 box2 box2"
-    ". box4 box4 box3"
-    "box1 box6 box6 box6";
+    "box1 box2 box2 box2"
+    "box1 box4 box4 box3"
+    "box1 box6 box6 box6"
+    "box1 . . .";
 
   .link {
     width: 2rem;
@@ -98,6 +95,7 @@ const HeroStyled = styled.section`
 
   .page {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
   }
 
@@ -129,31 +127,32 @@ const HeroStyled = styled.section`
     grid-area: box6;
     display: flex;
 
-    .imgLeft,
-    .imgRight {
+    .imgLeft {
       width: 50%;
       height: 100%;
       box-shadow: -8px 8px 4px rgba(0, 0, 0, 0.25);
+      transition: transform 0.5s ease;
+      z-index: 1;
     }
 
-    .imgLeft-hover {
+    .imgRight {
+      width: 50%;
+      height: 100%;
+
+      transform: ${({ initialScale }) => initialScale && "scale(1.2)"};
+      box-shadow: -8px 8px 4px rgba(0, 0, 0, 0.25);
+      transition: transform 0.5s ease;
+      z-index: ${({ initialScale }) => (initialScale ? "2" : "1")};
+    }
+
+    .imgLeft:hover,
+    .imgRight:hover {
       width: 50%;
       height: 100%;
       box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
       transform: scale(1.2);
       transition: transform 0.5s ease;
-      transition-duration: 2s;
-      transition-delay: 0.5s;
-    }
-
-    .imgRight-hover {
-      width: 45.5%;
-      height: 100%;
-      box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
-      transform: scale(1.2);
-      transition: transform 0.5s ease;
-      transition-duration: 2s;
-      transition-delay: 0.5s;
+      z-index: 2;
     }
   }
 `;
@@ -161,19 +160,33 @@ const HeroStyled = styled.section`
 const HeroLeftStyled = styled.section`
   grid-area: box1;
 
+  .horizontal-line {
+    width: 3.5rem;
+    border-bottom: 1.6px solid black;
+  }
+
+  padding: 1rem 0rem;
+
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
 
   p {
-    font-size: 1.5rem;
+
+    font-size: 1.7rem;
     font-weight: lighter;
   }
 
-  img {
-    width: 2rem;
-   
+  .arrow-down-icon {
+    img{
+      width: 2rem;
+      margin-left: 4rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    
   }
 `;
 

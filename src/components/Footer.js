@@ -8,28 +8,25 @@ const Footer = () => {
   return (
     <FooterStyled>
       <ul>
-        <li><img src={googleIcon} alt="google icon " />
-        <img src={instagramIcon} alt="instagram icon " />
+        <li>
+          <img src={googleIcon} alt="google icon " />
+          <img src={instagramIcon} alt="instagram icon " />
         </li>
-        
-        <li><img src={copyrightIcon} alt="copyright icon " />
-        <p>Tei Artworks {new Date().getFullYear()}</p>
+
+        <li>
+          <img src={copyrightIcon} alt="copyright icon " />
+          <p>Tei Artworks {new Date().getFullYear()}</p>
         </li>
 
         <li></li>
-
       </ul>
-    
     </FooterStyled>
   );
 };
 
 const FooterStyled = styled.footer`
-  /* display: flex;
-  align-items: center; */
   margin: 6rem 3rem;
   min-height: 5rem;
-  
 
   img {
     width: 1.7rem;
@@ -40,12 +37,12 @@ const FooterStyled = styled.footer`
     align-items: center;
   }
 
-  ul li:nth-child(1){
+  ul li:nth-child(1) {
     display: flex;
     gap: 1.1rem;
   }
 
-  ul li:nth-child(2){
+  ul li:nth-child(2) {
     display: flex;
     align-items: center;
     gap: 1.1rem;
@@ -53,17 +50,12 @@ const FooterStyled = styled.footer`
     p {
       font-size: 0.875rem;
       font-size: 1rem;
-      font-family: 'Raleway', sans-serif;
+      font-family: "Raleway", sans-serif;
       font-weight: normal;
     }
     img {
       width: 1.5rem;
     }
-
-    
-    
   }
-
- 
 `;
 export default Footer;

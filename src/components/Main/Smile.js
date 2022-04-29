@@ -1,23 +1,31 @@
-import React from "react";
+
+import { useEffect } from "react";
 import styled from "styled-components";
 import arrowRight from "../../assets/images/right-arrow-yellow.png";
 import SeeMore from "../SeeMore";
-import arrowDown from "../../assets/images/arrow-down-yellow.png";
-import minus from "../../assets/images/minus-yellow.png";
+import arrowDown from "../../assets/images/down-arrow-yellow.png";
 import ExhibitColorful from "../../assets/images/exhibit_colorful.png";
 import ColorfulDisplay from "../../assets/images/colorful_displays2.png";
 import { Link } from "react-scroll";
+import home from "../../assets/images/home-yellow.png";
 
 const Smile = () => {
+
+
+  
   return (
     <SmileStyled id="smile">
       <SmileLeftStyled>
+
+      <Link className="link" to="/">
+        <img src={home} alt="home icon" className="home-icon" />
+      </Link>
         <div className="page">
-          <img src={minus} alt="horizontal line" />
+          <div className="horizontal-line"></div>
           <p>02</p>
         </div>
 
-        <Link className="link" to="exhibitions">
+        <Link className="link" to="exhibitions" className="arrow-down-icon">
           <img src={arrowDown} alt="arrow to the right" />
         </Link>
       </SmileLeftStyled>
@@ -56,9 +64,10 @@ const SmileStyled = styled.section`
   gap: 3rem;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-areas:
-    ". box2 box2 box2"
-    ". box4 box4 box3"
-    "box1 box6 box6 box6";
+    "box1 box2 box2 box2"
+    "box1 box4 box4 box3"
+    "box1 box6 box6 box6"
+    "box1 . . . ";
 
   .link {
     width: 2rem;
@@ -66,6 +75,7 @@ const SmileStyled = styled.section`
 
   .page {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
   }
 
@@ -113,21 +123,33 @@ const SmileStyled = styled.section`
 const SmileLeftStyled = styled.section`
   grid-area: box1;
 
+  .horizontal-line {
+    width: 3.5rem;
+    border-bottom: 1.6px solid #ffe600;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: lighter;
   }
 
-  img {
-    width: 2rem;
-    bottom: 0%;
-    left: 5%;
+  .home-icon {
+    width: 3rem;
+    margin-left: 3.5rem;
   }
+
+    img {
+      width: 2rem;
+      margin-left: 4rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
 `;
 
 export default Smile;

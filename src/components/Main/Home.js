@@ -3,38 +3,41 @@ import React from "react";
 import styled from "styled-components";
 import bgMarble from "../../assets/images/marble_image.png";
 
+import { useState } from "react";
 import Navbar from "../Navbar";
 import Hero from "./Hero";
 import Smile from "./Smile";
 import AboutExhibitions from "./AboutExhibitions";
 import Footer from "../Footer";
 import Booking from "./Booking";
-import Modal from '../../components/Main/Modal'
+import Modal from "./ModalExhibitions";
 
-const Home = () => {
+const Home = (props) => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
-    <MainWrapperStyled>
+    <>
+      {openModal && <Modal setOpenModal={setOpenModal} />}
 
+      {/* {!openModal &&  */}
+      {/* ( */}
+        <MainWrapperStyled>
+          <div className="header-hero-bg">
+            <Navbar />
+            <Hero />
+          </div>
 
-      <div className="header-hero-bg">
-        <Navbar />
-        <Hero />
-      </div>
+          <Smile />
+          <AboutExhibitions setOpenModal={setOpenModal} />
 
-
-      <Smile />
-      <AboutExhibitions />
-
-      <div className="booking-footer-bg">
-        <Booking />
-        <Footer />
-      </div>
-
-
-      <Modal />
-
-
-    </MainWrapperStyled>
+          <div className="booking-footer-bg">
+            <Booking />
+            <Footer />
+          </div>
+        </MainWrapperStyled>
+      {/* )
+      } */}
+    </>
   );
 };
 
