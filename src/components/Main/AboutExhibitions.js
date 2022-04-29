@@ -91,7 +91,7 @@ const ExhibitionsLeftStyled = styled.section`
   }
 
   .home-icon {
-    width: 1.679rem;
+    width: 2.125rem;
     margin-left: 3.5rem;
   }
   img {
