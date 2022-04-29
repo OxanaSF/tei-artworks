@@ -122,7 +122,7 @@ const SmileLeftStyled = styled.section`
   grid-area: box1;
 
   .horizontal-line {
-    /* width: 3.5rem; */
+    width: 3.5rem;
     border-bottom: 1px solid #ffe600;
   }
 
