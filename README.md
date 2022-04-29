@@ -16,7 +16,7 @@
 
 This is a desktop website for a business called Tei Artworks organized by a Japan based artist Kobe. It was designed and developed to be interactive and engaging in order to hold the attention of users and encourage them to keep exploring. .
 
-Special thanks to [Klay Simmons](https://www.linkedin.com/in/klay-simmons-b82b08221/) for the awesome design, invaluable input, and well organized figma project.
+Special thanks to [Dillon Chhit](https://www.linkedin.com/in/dillon-chhit-8b0328222/) for the awesome design, invaluable input, and well organized figma project.
 
 ### The challenge
 
