@@ -1,5 +1,3 @@
-
-import { useEffect } from "react";
 import styled from "styled-components";
 import arrowRight from "../../assets/images/right-arrow-yellow.png";
 import SeeMore from "../SeeMore";
@@ -9,17 +7,17 @@ import ColorfulDisplay from "../../assets/images/colorful_displays2.png";
 import { Link } from "react-scroll";
 import home from "../../assets/images/home-yellow.png";
 
-const Smile = () => {
-
-
-  
+const Smile = (props) => {
   return (
     <SmileStyled id="smile">
       <SmileLeftStyled>
+        <img
+          src={home}
+          alt="home icon"
+          className="home-icon"
+          onClick={props.scrollTop}
+        />
 
-      <Link className="link" to="/">
-        <img src={home} alt="home icon" className="home-icon" />
-      </Link>
         <div className="page">
           <div className="horizontal-line"></div>
           <p>02</p>
@@ -143,13 +141,12 @@ const SmileLeftStyled = styled.section`
     margin-left: 3.5rem;
   }
 
-    img {
-      width: 2rem;
-      margin-left: 4rem;
-      margin-bottom: 2rem;
-      cursor: pointer;
-    }
-
+  img {
+    width: 2rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
 `;
 
 export default Smile;

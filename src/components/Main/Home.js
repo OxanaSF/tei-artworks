@@ -1,8 +1,6 @@
 import React from "react";
-
 import styled from "styled-components";
 import bgMarble from "../../assets/images/marble_image.png";
-
 import { useState } from "react";
 import Navbar from "../Navbar";
 import Hero from "./Hero";
@@ -15,28 +13,28 @@ import Modal from "./ModalExhibitions";
 const Home = (props) => {
   const [openModal, setOpenModal] = useState(false);
 
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       {openModal && <Modal setOpenModal={setOpenModal} />}
 
-      {/* {!openModal &&  */}
-      {/* ( */}
-        <MainWrapperStyled>
-          <div className="header-hero-bg">
-            <Navbar />
-            <Hero />
-          </div>
+      <MainWrapperStyled>
+        <div className="header-hero-bg">
+          <Navbar />
+          <Hero />
+        </div>
 
-          <Smile />
-          <AboutExhibitions setOpenModal={setOpenModal} />
+        <Smile scrollTop={scrollTop} />
+        <AboutExhibitions setOpenModal={setOpenModal} scrollTop={scrollTop} />
 
-          <div className="booking-footer-bg">
-            <Booking />
-            <Footer />
-          </div>
-        </MainWrapperStyled>
-      {/* )
-      } */}
+        <div className="booking-footer-bg">
+          <Booking scrollTop={scrollTop} />
+          <Footer />
+        </div>
+      </MainWrapperStyled>
     </>
   );
 };

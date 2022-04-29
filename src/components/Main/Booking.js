@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import manPaintingImg from "../../assets/images/man_painting.png";
-import LeftScroll from "../LeftScroll";
+
 import ArrowRightContactMe from "../../assets/images/right-arrow-contact-me.png";
-import minus from "../../assets/images/minus.png";
-import arrowDown from "../../assets/images/arrow-down-black.png";
-import { Link } from "react-scroll";
+
 import home from "../../assets/images/home-black.png";
 
-const Booking = () => {
+const Booking = (props) => {
   return (
     <BookingStyled id="bookings">
       <BookingLeftStyled>
-        <img src={home} alt="home icon" className="home-icon" />
+        <img
+          src={home}
+          alt="home icon"
+          className="home-icon"
+          onClick={props.scrollTop}
+        />
 
         <div className="page">
           <div className="horizontal-line"></div>
@@ -61,7 +64,7 @@ const BookingStyled = styled.section`
     img {
       box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
       height: 650px;
- 
+
       width: 82%;
     }
   }
@@ -90,7 +93,7 @@ const BookingStyled = styled.section`
       font-size: 3.3rem;
     }
 
-    p{
+    p {
       font-size: 1.5rem;
       line-height: 1.2;
     }

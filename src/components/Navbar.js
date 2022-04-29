@@ -7,7 +7,7 @@ import instagram from "../assets/images/instagram.png";
 
 const Navbar = () => {
   return (
-    <NavbarStyled>
+    <NavbarStyled id="/">
       <div className="nav-left">
         <img src={logo} alt="logo" id="logo" />
 

@@ -7,9 +7,7 @@ import SmallFace from "../../assets/images/small_face_frame.png";
 import ArrowPointRight from "../../assets/images/right-arrow-white.png";
 import arrowDown from "../../assets/images/down-arrow-white.png";
 import { Link } from "react-scroll";
-import home from '../../assets/images/home-white.png'
-
-
+import home from "../../assets/images/home-white.png";
 
 const AboutExhibitions = (props) => {
   const [isScaled, setIsScaled] = useState(false);
@@ -21,12 +19,15 @@ const AboutExhibitions = (props) => {
   return (
     <ExhibitionsStyled id="exhibitions">
       <ExhibitionsLeftStyled>
-
-      <img src={home} alt="home icon" className="home-icon" />
-
+        <img
+          src={home}
+          alt="home icon"
+          className="home-icon"
+          onClick={props.scrollTop}
+        />
 
         <div className="page">
-        <div className="horizontal-line"></div>
+          <div className="horizontal-line"></div>
           <p>03</p>
         </div>
 
@@ -50,11 +51,12 @@ const AboutExhibitions = (props) => {
       <SeeMore arrowRight={ArrowPointRight} />
 
       <div className="bottom">
-
         {/* <NavLink className="imgLeft" to={'/test'}> */}
 
-        
-        <img onClick={() => {props.setOpenModal(true)}}
+        <img
+          onClick={() => {
+            props.setOpenModal(true);
+          }}
           className="imgLeft"
           src={ExhibitionChairs}
           alt="exhibition chairs"
@@ -84,7 +86,6 @@ const ExhibitionsLeftStyled = styled.section`
     border-bottom: 1.6px solid #e8e6d9;
   }
 
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,12 +101,11 @@ const ExhibitionsLeftStyled = styled.section`
     margin-left: 3.5rem;
   }
   img {
-      width: 2rem;
-      margin-left: 4rem;
-      margin-bottom: 2rem;
-      cursor: pointer;
-    }
-
+    width: 2rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
 `;
 
 const ExhibitionsStyled = styled.section`
