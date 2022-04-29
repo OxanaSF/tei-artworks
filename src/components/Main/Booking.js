@@ -1,28 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import manPaintingImg from "../../assets/images/man_painting.png";
-
 import ArrowRightContactMe from "../../assets/images/right-arrow-contact-me.png";
-
 import home from "../../assets/images/home-black.png";
+import LeftPage from "./LeftPage";
 
 const Booking = (props) => {
   return (
     <BookingStyled id="bookings">
       <BookingLeftStyled>
-        <img
-          src={home}
-          alt="home icon"
-          className="home-icon"
-          onClick={props.scrollTop}
+        <LeftPage
+          home={home}
+          pageNumber={"04"}
+          link={"bookings"}
+          scrollTop={props.scrollTop}
         />
-
-        <div className="page">
-          <div className="horizontal-line"></div>
-          <p>04</p>
-        </div>
-
-        <div></div>
       </BookingLeftStyled>
 
       <div className="man-painting">

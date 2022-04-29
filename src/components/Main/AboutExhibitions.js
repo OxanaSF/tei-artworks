@@ -6,8 +6,8 @@ import DisplayFaces from "../../assets/images/displays_of_faces.png";
 import SmallFace from "../../assets/images/small_face_frame.png";
 import ArrowPointRight from "../../assets/images/right-arrow-white.png";
 import arrowDown from "../../assets/images/down-arrow-white.png";
-import { Link } from "react-scroll";
 import home from "../../assets/images/home-white.png";
+import LeftPage from "./LeftPage";
 
 const AboutExhibitions = (props) => {
   const [isScaled, setIsScaled] = useState(false);
@@ -19,21 +19,13 @@ const AboutExhibitions = (props) => {
   return (
     <ExhibitionsStyled id="exhibitions">
       <ExhibitionsLeftStyled>
-        <img
-          src={home}
-          alt="home icon"
-          className="home-icon"
-          onClick={props.scrollTop}
+        <LeftPage
+          home={home}
+          pageNumber={"03"}
+          link={"bookings"}
+          arrowDown={arrowDown}
+          scrollTop={props.scrollTop}
         />
-
-        <div className="page">
-          <div className="horizontal-line"></div>
-          <p>03</p>
-        </div>
-
-        <Link className="link" to="bookings" className="arrow-down-icon">
-          <img src={arrowDown} alt="arrow to the right" />
-        </Link>
       </ExhibitionsLeftStyled>
 
       <h2>Exhibitions</h2>

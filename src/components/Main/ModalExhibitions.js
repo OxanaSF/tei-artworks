@@ -4,6 +4,7 @@ import chairsImg from "../../assets/images/exhibition_w_chairs.png";
 import close from "../../assets/images/close.png";
 import runningCharacter from "../../assets/images/big_character.png";
 
+
 const ModalExhibitions = (props) => {
   return (
     <ModalStyled>

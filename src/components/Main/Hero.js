@@ -4,32 +4,26 @@ import holographicHand from "../../assets/images/holographic_wall_display.png";
 import colorfulCharacter from "../../assets/images/colorful_character.png";
 import SeeMore from "../SeeMore";
 import arrowRight from "../../assets/images/right-arrow-black.png";
-import { Link } from "react-scroll";
-import arrowDown from '../../assets/images/down-arrow-black.png'
+import arrowDown from "../../assets/images/down-arrow-black.png";
+import LeftPage from "./LeftPage";
 
 const Hero = () => {
   const [isScaled, setIsScaled] = useState(false);
 
   const [initialScale, setInitialScale] = useState(true);
 
-  const hoverEffectHandler = () => {
+  const hoverEffectHandler = (props) => {
     setIsScaled(!isScaled);
   };
 
   return (
-    <HeroStyled initialScale={initialScale} >
+    <HeroStyled initialScale={initialScale}>
       <HeroLeftStyled>
-
-        <div></div>
-
-        <div className="page">
-          <div className="horizontal-line"></div>
-          <p>01</p>
-        </div>
-
-        <Link className="link" to="smile" className="arrow-down-icon">
-          <img src={arrowDown} alt="arrow to the right" />
-        </Link>
+        <LeftPage
+          pageNumber={"02"}
+          link={"exhibitions"}
+          arrowDown={arrowDown}
+        />
       </HeroLeftStyled>
 
       <h1>Tei Artworks</h1>
@@ -56,14 +50,12 @@ const Hero = () => {
         }}
       >
         <img
-          onMouseOver={hoverEffectHandler}
           className="imgLeft"
           src={holographicHand}
           alt="holographic hands"
         />
 
         <img
-          onMouseOver={hoverEffectHandler}
           className="imgRight"
           src={colorfulCharacter}
           alt="colorful character"
@@ -174,19 +166,17 @@ const HeroLeftStyled = styled.section`
   gap: 1rem;
 
   p {
-
     font-size: 1.7rem;
     font-weight: lighter;
   }
 
   .arrow-down-icon {
-    img{
+    img {
       width: 2rem;
       margin-left: 4rem;
       margin-bottom: 2rem;
       cursor: pointer;
     }
-    
   }
 `;
 
