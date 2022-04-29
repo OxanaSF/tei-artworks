@@ -25,6 +25,9 @@ Special thanks to [Dillon Chhit](https://www.linkedin.com/in/dillon-chhit-8b0328
 ### Designs
 
 [Figma Project Here](https://www.figma.com/proto/sSHw35ZtGJ4dqzow2skAkk/Artist-Project?node-id=2%3A371&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=2%3A371)
+![Final Artifact](./designs/Tei_Artwork_design.png)
+
+
 
 ### Links
 
@@ -54,3 +57,12 @@ Special thanks to [Dillon Chhit](https://www.linkedin.com/in/dillon-chhit-8b0328
   - [Linkedin](https://www.linkedin.com/in/oxana-howard/)
 - Dillon Chhit - Designer
   - [Linkedin](https://www.linkedin.com/in/dillon-chhit-8b0328222/)
+
+
+
+
+
+
+
+
+  
