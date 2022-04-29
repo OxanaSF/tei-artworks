@@ -7,7 +7,6 @@ import SmallFace from "../../assets/images/small_face_frame.png";
 import ArrowPointRight from "../../assets/images/right-arrow-white.png";
 import arrowDown from "../../assets/images/down-arrow-white.png";
 import home from "../../assets/images/home-white.png";
-// import LeftPage from "./LeftPage";
 import { Link } from "react-scroll";
 
 const AboutExhibitions = (props) => {
@@ -48,7 +47,6 @@ const AboutExhibitions = (props) => {
       <SeeMore arrowRight={ArrowPointRight} />
 
       <div className="bottom">
-        {/* <NavLink className="imgLeft" to={'/test'}> */}
 
         <img
           onClick={() => {
@@ -58,7 +56,6 @@ const AboutExhibitions = (props) => {
           src={ExhibitionChairs}
           alt="exhibition chairs"
         />
-        {/* </NavLink> */}
 
         <div className="img-wrapper">
           <img

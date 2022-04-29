@@ -32,6 +32,7 @@ Special thanks to [Dillon Chhit](https://www.linkedin.com/in/dillon-chhit-8b0328
 ### Links
 
 - Solution URL: [https://github.com/OxanaSF/tei-artworks](https://github.com/OxanaSF/tei-artworks)
+- Live Site URL: [https://tei-artwoks.netlify.app/](https://tei-artwoks.netlify.app/)
 
 ## My process
 
@@ -62,7 +63,3 @@ Special thanks to [Dillon Chhit](https://www.linkedin.com/in/dillon-chhit-8b0328
 
 
 
-
-
-
-  

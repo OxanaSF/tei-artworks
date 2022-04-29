@@ -1,9 +1,7 @@
 
 import GlobalStyles from "./components/GlobalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import styled from "styled-components";
-
 import Home from "./components/Main/Home";
 import Exhibitions from "./pages/Exhibitions";
 import About from "./pages/About";
