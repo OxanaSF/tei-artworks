@@ -98,8 +98,6 @@ const HeroStyled = styled.section`
 
   h1 {
     grid-area: box2;
-    font-weight: bold;
-    font-size: 5rem;
   }
 
   .text {
@@ -107,7 +105,7 @@ const HeroStyled = styled.section`
     display: flex;
     margin-right: 10rem;
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: 400;
     line-height: 1.4;
   }
 
@@ -159,7 +157,7 @@ const HeroLeftStyled = styled.section`
 
   .horizontal-line {
     width: 3.5rem;
-    border-bottom: 1.6px solid black;
+    border-bottom: 1px solid black;
   }
 
   padding: 1rem 0rem;
@@ -170,10 +168,6 @@ const HeroLeftStyled = styled.section`
   justify-content: space-between;
   gap: 1rem;
 
-  p {
-    font-size: 1.7rem;
-    font-weight: lighter;
-  }
 
   .arrow-down-icon {
     img {

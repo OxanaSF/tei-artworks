@@ -35,6 +35,7 @@ h1 {
 h2 {
   font-size: 4rem;
   font-family: 'Ramaraja', serif;
+  font-weight: 400;
 
 }
 
@@ -46,6 +47,7 @@ li {
 li a {
   color: #161616;
   font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: 0.063rem;
   text-decoration: none;
@@ -53,6 +55,8 @@ li a {
 
 p{
   font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 `
 

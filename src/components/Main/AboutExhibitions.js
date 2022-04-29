@@ -77,7 +77,7 @@ const ExhibitionsLeftStyled = styled.section`
 
   .horizontal-line {
     width: 3.5rem;
-    border-bottom: 1.6px solid #e8e6d9;
+    border-bottom: 1px solid #e8e6d9;
   }
 
   display: flex;
@@ -91,7 +91,7 @@ const ExhibitionsLeftStyled = styled.section`
   }
 
   .home-icon {
-    width: 3rem;
+    width: 1.679rem;
     margin-left: 3.5rem;
   }
   img {
@@ -130,7 +130,7 @@ const ExhibitionsStyled = styled.section`
 
   h2 {
     grid-area: box2;
-    font-weight: bold;
+
   }
 
   .text {
@@ -138,7 +138,7 @@ const ExhibitionsStyled = styled.section`
     display: flex;
     margin-right: 10rem;
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: normal;
     line-height: 1.5;
   }
 

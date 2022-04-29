@@ -119,7 +119,7 @@ const BookingLeftStyled = styled.section`
 
   .horizontal-line {
     width: 3.5rem;
-    border-bottom: 1.6px solid black;
+    border-bottom: 1px solid black;
   }
 
   display: flex;
@@ -127,13 +127,10 @@ const BookingLeftStyled = styled.section`
   justify-content: space-between;
   gap: 20rem;
 
-  p {
-    font-size: 1.5rem;
-    font-weight: lighter;
-  }
+ 
 
   .home-icon {
-    width: 3rem;
+    width: 1.679rem;
     margin-left: 3.5rem;
     cursor: pointer;
   }

@@ -86,7 +86,7 @@ const SmileStyled = styled.section`
     display: flex;
     margin-right: 10rem;
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: normal;
     line-height: 1.5;
   }
 
@@ -123,7 +123,7 @@ const SmileLeftStyled = styled.section`
 
   .horizontal-line {
     width: 3.5rem;
-    border-bottom: 1.6px solid #ffe600;
+    border-bottom: 1px solid #ffe600;
   }
 
   display: flex;
@@ -131,13 +131,8 @@ const SmileLeftStyled = styled.section`
   justify-content: space-between;
   gap: 1rem;
 
-  p {
-    font-size: 1.7rem;
-    font-weight: lighter;
-  }
-
   .home-icon {
-    width: 3rem;
+    width: 1.679rem;
     margin-left: 3.5rem;
   }
 
