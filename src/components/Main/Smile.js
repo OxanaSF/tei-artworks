@@ -122,7 +122,7 @@ const SmileLeftStyled = styled.section`
   grid-area: box1;
 
   .horizontal-line {
-    width: 3.5rem;
+    /* width: 3.5rem; */
     border-bottom: 1px solid #ffe600;
   }
 
@@ -132,7 +132,7 @@ const SmileLeftStyled = styled.section`
   gap: 1rem;
 
   .home-icon {
-    width: 2.125rem;
+    width: 3rem;
     margin-left: 3.5rem;
   }
 

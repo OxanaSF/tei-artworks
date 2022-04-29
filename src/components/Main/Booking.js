@@ -130,7 +130,7 @@ const BookingLeftStyled = styled.section`
  
 
   .home-icon {
-    width: 2.125rem;
+    width: 3rem;
     margin-left: 3.5rem;
     cursor: pointer;
   }
