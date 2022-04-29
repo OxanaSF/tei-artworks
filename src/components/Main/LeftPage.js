@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-scroll";
 
 const LeftPage = (props) => {
-  const homeLength = props.home.length !== 0;
-  const arrowLength = props.arrowDown.length !== 0;
+  const page = props.pageNumber;
 
   return (
     <>
-      {homeLength && arrowLength ? (
+      {page === "2" || page === "3" ? (
         <div>
           <img
             src={props.home}
@@ -25,9 +24,8 @@ const LeftPage = (props) => {
             <img src={props.arrowDown} alt="arrow to the right" />
           </Link>
         </div>
-      ) : homeLength ? (
+      ) : page === "4" ? (
         <div>
-          <div></div>
           <img
             src={props.home}
             alt="home icon"
@@ -39,22 +37,21 @@ const LeftPage = (props) => {
             <div className="horizontal-line"></div>
             <p>{props.pageNumber}</p>
           </div>
+
+          <div></div>
         </div>
       ) : (
         <div>
-          <img
-            src={props.home}
-            alt="home icon"
-            className="home-icon"
-            onClick={props.scrollTop}
-          />
+          <div></div>
 
           <div className="page">
             <div className="horizontal-line"></div>
             <p>{props.pageNumber}</p>
           </div>
 
-          <div></div>
+          <Link className="link" to={props.link} className="arrow-down-icon">
+            <img src={props.arrowDown} alt="arrow to the right" />
+          </Link>
         </div>
       )}
     </>

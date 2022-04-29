@@ -5,9 +5,9 @@ import colorfulCharacter from "../../assets/images/colorful_character.png";
 import SeeMore from "../SeeMore";
 import arrowRight from "../../assets/images/right-arrow-black.png";
 import arrowDown from "../../assets/images/down-arrow-black.png";
-import LeftPage from "./LeftPage";
+import { Link } from "react-scroll";
 
-const Hero = () => {
+const Hero = (props) => {
   const [isScaled, setIsScaled] = useState(false);
 
   const [initialScale, setInitialScale] = useState(true);
@@ -19,11 +19,16 @@ const Hero = () => {
   return (
     <HeroStyled initialScale={initialScale}>
       <HeroLeftStyled>
-        <LeftPage
-          pageNumber={"02"}
-          link={"exhibitions"}
-          arrowDown={arrowDown}
-        />
+        <div></div>
+
+        <div className="page">
+          <div className="horizontal-line"></div>
+          <p>{"01"}</p>
+        </div>
+
+        <Link className="link" to={"smile"} className="arrow-down-icon">
+          <img src={arrowDown} alt="arrow to the right" />
+        </Link>
       </HeroLeftStyled>
 
       <h1>Tei Artworks</h1>

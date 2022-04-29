@@ -5,19 +5,27 @@ import arrowDown from "../../assets/images/down-arrow-yellow.png";
 import ExhibitColorful from "../../assets/images/exhibit_colorful.png";
 import ColorfulDisplay from "../../assets/images/colorful_displays2.png";
 import home from "../../assets/images/home-yellow.png";
-import LeftPage from "./LeftPage";
+import { Link } from "react-scroll";
 
 const Smile = (props) => {
   return (
     <SmileStyled id="smile">
       <SmileLeftStyled>
-        <LeftPage
-          home={home}
-          pageNumber={"02"}
-          link={"exhibitions"}
-          arrowDown={arrowDown}
-          scrollTop={props.scrollTop}
+        <img
+          src={home}
+          alt="home icon"
+          className="home-icon"
+          onClick={props.scrollTop}
         />
+
+        <div className="page">
+          <div className="horizontal-line"></div>
+          <p>{"02"}</p>
+        </div>
+
+        <Link className="link" to={"exhibitions"} className="arrow-down-icon">
+          <img src={arrowDown} alt="arrow to the right" />
+        </Link>
       </SmileLeftStyled>
 
       <h2>Smile</h2>

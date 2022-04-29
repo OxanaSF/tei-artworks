@@ -7,25 +7,30 @@ import SmallFace from "../../assets/images/small_face_frame.png";
 import ArrowPointRight from "../../assets/images/right-arrow-white.png";
 import arrowDown from "../../assets/images/down-arrow-white.png";
 import home from "../../assets/images/home-white.png";
-import LeftPage from "./LeftPage";
+// import LeftPage from "./LeftPage";
+import { Link } from "react-scroll";
 
 const AboutExhibitions = (props) => {
   const [isScaled, setIsScaled] = useState(false);
 
-  const hoverEffectHandler = () => {
-    setIsScaled(!isScaled);
-  };
-
   return (
     <ExhibitionsStyled id="exhibitions">
       <ExhibitionsLeftStyled>
-        <LeftPage
-          home={home}
-          pageNumber={"03"}
-          link={"bookings"}
-          arrowDown={arrowDown}
-          scrollTop={props.scrollTop}
+        <img
+          src={home}
+          alt="home icon"
+          className="home-icon"
+          onClick={props.scrollTop}
         />
+
+        <div className="page">
+          <div className="horizontal-line"></div>
+          <p>{"03"}</p>
+        </div>
+
+        <Link className="link" to={"bookings"} className="arrow-down-icon">
+          <img src={arrowDown} alt="arrow to the right" />
+        </Link>
       </ExhibitionsLeftStyled>
 
       <h2>Exhibitions</h2>
